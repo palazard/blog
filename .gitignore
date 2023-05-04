@@ -1,3 +1,6 @@
+# Secret directories
+secret/
+
 # project wide
 .DS_Store
 

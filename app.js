@@ -15,7 +15,7 @@ app.set('view engine', 'ejs');
 main().catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/blogDB');
+  await mongoose.connect('mongodb+srv://${process.env.DATABASE_USER}:${process.env.DATABASE_PW}@cluster0.t2lhuqo.mongodb.net/blogDB?retryWrites=true&w=majority');
 }
 
 app.use(express.urlencoded({extended: false}));
